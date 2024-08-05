@@ -14,6 +14,6 @@ func TestHelloName(t *testing.T) {
 	msg, err := Hello("Gladys")
 
 	if !want.MatchString(msg) || err != nil {
-
+		t.Fatalf(`Hello("Gladys" = %q, %v, wat)`)
 	}
 }
